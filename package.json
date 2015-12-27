@@ -1,0 +1,30 @@
+{
+  "name": "webpack-multipage-for-Boqii-H5",
+  "description": "Frontend engineering solution based on webpack.",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "release": "webpack --config webpack-release.config.js"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.15.6",
+    "extract-text-webpack-plugin": "^0.8.2",
+    "file-loader": "^0.8.4",
+    "html-webpack-plugin": "^1.7.0",
+    "image-webpack-loader": "^1.6.1",
+    "imagemin": "^3.2.0",
+    "jshint-stylish": "^2.0.1",
+    "jsx-loader": "^0.13.2",
+    "lodash": "^3.10.0",
+    "node-libs-browser": "^0.5.2",
+    "sass-loader": "^1.0.3",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.10.5",
+    "webpack-dev-server": "^1.10.1"
+  },
+  "licence": "MIT"
+}
