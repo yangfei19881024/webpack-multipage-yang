@@ -5,7 +5,9 @@
 + 支持 AMD, CMD , es6 模块化
 + es6 语法
 + react
+
 #基本命令
+
 ```
 开发环境
 npm run dev
