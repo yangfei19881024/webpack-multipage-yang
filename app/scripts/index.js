@@ -91,6 +91,8 @@
 // .catch(err = >{
 //   console.log(err);
 // })
+"use strict";
+import Util from "./public/utils";
 
 require("../styles/index.css");
 

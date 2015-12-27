@@ -15,9 +15,10 @@ var assets = 'assets/';
 
 function makeConfig(options){
   var DEBUG = options.DEBUG;
-
+  var entries = getEntries();
+  var chunks = Object.keys(entries);
   var config = {
-    entry: getEntries(),
+    entry: entries,
 
     output: {
         path: path.resolve(DEBUG ? '__build' : assets),
@@ -28,7 +29,7 @@ function makeConfig(options){
     module: {
         //加载器配置
         loaders: [
-            { test: /\.js$/, loader: 'jsx-loader?harmony' },
+            { test: /\.js(x)?$/, loader: 'babel-loader?presets[]=es2015&presets[]=react' },
             { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
         ]
     },
@@ -97,6 +98,7 @@ function makeConfig(options){
             //m[1] => index or gooddetail
             if(m[1] in config.entry) {
                 conf.inject = 'body';
+                //一下配置是把js和相关的html文件一一对应，如果不加此配置，就会把所有的js都注入到html中，显然多余
                 conf.chunks = ['vendors', m[1]];
             }
 
@@ -112,6 +114,16 @@ function makeConfig(options){
             }
         })
     );
+    //公共文件的提取
+    config.plugins.push(
+      new CommonsChunkPlugin({
+          name: 'vendors',
+          chunks: chunks,
+          // Modules must be shared between all entries
+          minChunks: chunks.length // 提取所有chunks共同依赖的模块
+      })
+    );
+    // 以上配置是 生产环境的配置
   }
 
   return config;
