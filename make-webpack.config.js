@@ -21,9 +21,10 @@ function makeConfig(options){
     entry: entries,
 
     output: {
+        // 在debug模式下，__build目录是虚拟的，webpack的dev server存储在内存里
         path: path.resolve(DEBUG ? '__build' : assets),
         filename: DEBUG ? '[name].bundle.js' : 'js/[chunkhash:8].[name].min.js',
-        chunkFilename: DEBUG ? 'common.js':'js/[chunkhash:8].common.min.js',
+        chunkFilename: DEBUG ? '[chunkhash:8].chunk.js' : 'js/[chunkhash:8].chunk.min.js',
         publicPath: DEBUG ? '/__build/' : ''
     },
     module: {
@@ -35,7 +36,13 @@ function makeConfig(options){
     },
 
     plugins: [
-    ],
+      new CommonsChunkPlugin({
+          name: 'vendors',
+          chunks: chunks,
+          // Modules must be shared between all entries
+          minChunks: chunks.length // 提取所有chunks共同依赖的模块
+      })
+    ]
 
   }
 
@@ -113,15 +120,6 @@ function makeConfig(options){
                 warnings: false
             }
         })
-    );
-    //公共文件的提取
-    config.plugins.push(
-      new CommonsChunkPlugin({
-          name: 'vendors',
-          chunks: chunks,
-          // Modules must be shared between all entries
-          minChunks: chunks.length // 提取所有chunks共同依赖的模块
-      })
     );
     // 以上配置是 生产环境的配置
   }
