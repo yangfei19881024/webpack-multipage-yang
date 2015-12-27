@@ -2,3 +2,8 @@
 	color:red;
 	background: blue;
 }
+.list li{
+	padding:10px;
+	font-size: 20px;
+	border-bottom: 1px solid red;
+}

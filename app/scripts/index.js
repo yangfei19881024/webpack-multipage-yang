@@ -93,10 +93,18 @@
 // })
 "use strict";
 import Util from "./public/utils";
+import $ from "jquery";
 
 require("../styles/index.css");
 
-console.log("index page!!!!");
+
+// $(".list li").click(function(){
+//    alert($(this).text())
+// });
+
+$(document).on("click","li",function(){
+  alert($(this).text("yangasdfs"))
+});
 
 var fun = (txt)=> {
   console.log(txt);
