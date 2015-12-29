@@ -15,9 +15,17 @@ npm run dev
 生产环境
 npm run release
 ```
-##几点注意的地方
+##handlerbar-loader 几点注意的地方
 ```
-使用 handlerbar时候 需要
+使用 handlerbar时候 需要 安装
 npm i handlerbars-loader --save-dev
-npm i handerbars --save *[必须要要装]*
+npm i handerbars --save *[必须要要装]*  不装会报错
+```
+##postcss-loader 几点注意的地方
+```
+使用 postcss 需要 安装
+npm i postcss-loader --save-dev
+npm i postcss --save-dev *[必须要要装]* 不装会报错
+npm i autoprefixer --save-dev 自动加上浏览器前缀
+npm i precss --save-dev 支持写 sass-like 语法(支持 $声明变量,@defined-mixin,@defined-extend )
 ```

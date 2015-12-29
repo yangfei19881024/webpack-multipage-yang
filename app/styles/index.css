@@ -7,7 +7,15 @@
 	font-size: 20px;
 	border-bottom: 1px solid red;
 }
+
+$color: red;
+
 .linklists li{
-	border-bottom: 1px solid red;
+	border-bottom: 1px solid yellow;
 	padding: 10px;
+	display: flex;
+	transform: translate(100px);
+	a{
+		color: $color;
+	}
 }

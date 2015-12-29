@@ -9,6 +9,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 var UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 var CommonsChunkPlugin = webpack.optimize.CommonsChunkPlugin;
 
+var autoprefixer = require('autoprefixer');
+var precss       = require('precss');
+
 var jsSrc = path.join(__dirname,'app/scripts');
 var srcDir = path.join(__dirname,'app/views');
 var assets = 'assets/';
@@ -43,23 +46,26 @@ function makeConfig(options){
           // Modules must be shared between all entries
           minChunks: chunks.length // 提取所有chunks共同依赖的模块
       })
-    ]
+    ],
 
+    postcss: function () {
+        return [autoprefixer, precss];
+    }
   }
 
   if( DEBUG ){
     //css处理
     var cssLoader = {
-        test: /\.css$/,
-        loader: 'style!css'
+        test:   /\.css$/,
+        loader: "style-loader!css-loader!postcss-loader"
     };
-    var sassLoader = {
-        test: /\.scss$/,
-        loader: 'style!css!sass'
-    };
+    // var sassLoader = {
+    //     test: /\.scss$/,
+    //     loader: 'style!css!sass'
+    // };
 
     config.module.loaders.push(cssLoader);
-    config.module.loaders.push(sassLoader);
+    //config.module.loaders.push(sassLoader);
 
   }else{
 
