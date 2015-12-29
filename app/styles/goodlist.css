@@ -2,3 +2,8 @@
 	background: red;
 	color:#FFF;
 }
+
+.linklists li{
+	border-bottom: 1px solid blue;
+	padding: 10px;
+}

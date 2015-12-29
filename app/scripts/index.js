@@ -97,21 +97,28 @@ import $ from "jquery";
 
 require("../styles/index.css");
 
+var bookListingTemplate = require("../handlebars/index.handlebars");
 
-// $(".list li").click(function(){
-//    alert($(this).text())
-// });
-
-var bookListingTemplate = require("../views/index.handlebars");
-
-
-	var div = document.createElement('div');
-	div.innerHTML = bookListingTemplate({
+var indexTpl	 = bookListingTemplate({
 		username: "test",
 		books: [
-			{ title: "A book", synopsis: "With a description" },
+			{ title: "A book two bookss", synopsis: "With a description" },
 			{ title: "Another book", synopsis: "From a very good author" },
 			{ title: "Book without synopsis" }
-		]
+		],
 	});
-	document.body.appendChild(div);
+
+$("#userlist").append(indexTpl);
+
+var linkTemplate = require('../handlebars/links.handlebars');
+
+var indextext = "点击首页";
+
+$("#linklists").append(
+	linkTemplate({
+		indextext: indextext,
+		indexlink: "http://www.baidu.com",
+		hometext: '主页',
+		homelink: 'http://sina.com',
+	})
+);
