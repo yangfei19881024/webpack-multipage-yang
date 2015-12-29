@@ -15,3 +15,9 @@ npm run dev
 生产环境
 npm run release
 ```
+##几点注意的地方
+```
+使用 handlerbar时候 需要
+npm i handlerbar-loader --save-dev
+npm i handerbars --save *[必须要要装]*
+```
