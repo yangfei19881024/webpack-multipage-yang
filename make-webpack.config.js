@@ -31,7 +31,8 @@ function makeConfig(options){
         //加载器配置
         loaders: [
             { test: /\.js(x)?$/, loader: 'babel-loader?presets[]=es2015&presets[]=react' },
-            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'}
+            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
+            { test: /\.handlebars$/, loader: "handlebars-loader" }
         ]
     },
 

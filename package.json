@@ -7,6 +7,7 @@
     "release": "webpack --config webpack-release.config.js"
   },
   "dependencies": {
+    "handlebars": "^4.0.5",
     "lodash": "^3.10.1"
   },
   "devDependencies": {
@@ -17,6 +18,8 @@
     "css-loader": "^0.15.6",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "handlebars-loader": "^1.1.4",
+    "html-loader": "^0.4.0",
     "html-webpack-plugin": "^1.7.0",
     "image-webpack-loader": "^1.6.1",
     "imagemin": "^3.2.0",

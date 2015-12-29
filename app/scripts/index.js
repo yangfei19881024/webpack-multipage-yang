@@ -102,11 +102,16 @@ require("../styles/index.css");
 //    alert($(this).text())
 // });
 
-$(document).on("click","li",function(){
-  alert($(this).text("yangasdfs"))
-});
+var bookListingTemplate = require("../views/index.handlebars");
 
-var fun = (txt)=> {
-  console.log(txt);
-}
-fun("yangfei")
+
+	var div = document.createElement('div');
+	div.innerHTML = bookListingTemplate({
+		username: "test",
+		books: [
+			{ title: "A book", synopsis: "With a description" },
+			{ title: "Another book", synopsis: "From a very good author" },
+			{ title: "Book without synopsis" }
+		]
+	});
+	document.body.appendChild(div);
