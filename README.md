@@ -15,7 +15,7 @@ npm run dev
 生产环境
 npm run release
 ```
-##handlerbar-loader 几点注意的地方
+##handlerbars-loader 几点注意的地方
 ```
 使用 handlerbar时候 需要 安装
 npm i handlerbars-loader --save-dev
