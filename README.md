@@ -29,3 +29,9 @@ npm i postcss --save-dev *[必须要要装]* 不装会报错
 npm i autoprefixer --save-dev 自动加上浏览器前缀
 npm i precss --save-dev 支持写 sass-like 语法(支持 $声明变量,@defined-mixin,@defined-extend )
 ```
+
+## 使用zeptojs
+```javascript
+安装:npm install webpack-zepto
+import $ from 'webpack-zepto';
+```
