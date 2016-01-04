@@ -122,3 +122,17 @@ $("#linklists").append(
 		homelink: 'http://sina.com',
 	})
 );
+
+//=======引入第三方插件======
+import Swipe from "Swipe";
+
+window.mySwipe = new Swipe(document.getElementById('slider'), {
+  startSlide: 2,
+  speed: 400,
+  auto: 3000,
+  continuous: true,
+  disableScroll: false,
+  stopPropagation: false,
+  callback: function(index, elem) {},
+  transitionEnd: function(index, elem) {}
+});

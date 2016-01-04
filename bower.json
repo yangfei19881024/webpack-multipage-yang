@@ -1,0 +1,19 @@
+{
+  "name": "webpack-multipage-for-Boqii-H5",
+  "description": "Frontend engineering solution based on webpack.",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/yangfeiloveG/webpack-multipage-for-BoqiiH5",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Swipe": "thebird/Swipe#~2.0.0",
+    "Swiper": "nolimits4web/Swiper#~3.2.7"
+  }
+}
