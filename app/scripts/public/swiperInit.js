@@ -4,7 +4,8 @@ export default function swiperInit(
   {
     speed = 400,
     auto = 3000,
-    continuous = true
+    continuous = true,
+    callback = callback
   }={}
 ){
 
@@ -15,7 +16,7 @@ export default function swiperInit(
     continuous: continuous,
     disableScroll: false,
     stopPropagation: false,
-    callback: function(index, elem) {},
+    callback: callback,
     transitionEnd: function(index, elem) {}
   });
 }

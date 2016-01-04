@@ -128,4 +128,7 @@ $("#linklists").append(
 import swipe from "./public/swiperInit";
 swipe({
 	speed: 400,
+	callback:(index,elem)=>{
+		console.log(index);
+	}
 })
