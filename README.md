@@ -16,13 +16,13 @@ npm run dev
 npm run release
 ```
 ##[handlerbars-loader](https://github.com/altano/handlebars-loader) 几点注意的地方
-```
+```javascript
 使用 handlerbar时候 需要 安装
 npm i handlerbars-loader --save-dev
 npm i handerbars --save *[必须要要装]*  不装会报错
 ```
 ##[postcss-loader](https://github.com/postcss/postcss-loader) 几点注意的地方
-```
+```javascript
 使用 postcss 需要 安装
 npm i postcss-loader --save-dev
 npm i postcss --save-dev *[必须要要装]* 不装会报错
