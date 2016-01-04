@@ -35,3 +35,13 @@ npm i precss --save-dev 支持写 sass-like 语法(支持 $声明变量,@defined
 安装:npm install webpack-zepto
 import $ from 'webpack-zepto';
 ```
+##使用第三方非模块规范的库
+```javascript
+在配置里面做一下配置
+resolve:{
+  alias:{ //路径需要用 path.resolve 处理下
+      "Swipe":path.resolve(__dirname,"bower_components/Swipe/swipe.js")
+  }
+}
+在第三方库里做导出模块处理
+```
