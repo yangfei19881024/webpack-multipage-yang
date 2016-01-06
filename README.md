@@ -7,6 +7,13 @@
 + es6 语法
 + react
 
+##如何使用本项目
+```
+git clone https://github.com/yangfeiloveG/webpack-multipage-for-BoqiiH5.git
+cd webpack-multipage-for-BoqiiH5
+npm install
+```
+
 #基本命令
 
 ```
@@ -17,9 +24,9 @@ npm run release
 ```
 ##[handlerbars-loader](https://github.com/altano/handlebars-loader) 几点注意的地方
 ```javascript
-使用 handlerbar时候 需要 安装
-npm i handlerbars-loader --save-dev
-npm i handerbars --save *[必须要要装]*  不装会报错
+使用 handlebar时候 需要 安装
+npm i handlebars-loader --save-dev
+npm i handlebars --save *[必须要要装]*  不装会报错
 ```
 ##[postcss-loader](https://github.com/postcss/postcss-loader) 几点注意的地方
 ```javascript
