@@ -42,6 +42,7 @@ function makeConfig(options){
                         optimizationLevel: 3, pngquant:{quality: "65-80", speed: 4}}',
                     // url-loader更好用，小于10KB的图片会自动转成dataUrl，
                     // 否则则调用file-loader，参数直接传入
+                    // 一般用于 icon小图标
                     'url-loader?limit=20000&name=images/[hash:8].[name].[ext]',
                 ]
             },
