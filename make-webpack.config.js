@@ -34,8 +34,17 @@ function makeConfig(options){
         //加载器配置
         loaders: [
             { test: /\.js(x)?$/, loader: 'babel-loader?presets[]=es2015&presets[]=react' },
-            { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'},
-            { test: /\.handlebars$/, loader: "handlebars-loader" }
+            { test: /\.handlebars$/, loader: "handlebars-loader" },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: [
+                    'image?{bypassOnDebug: true, progressive:true, \
+                        optimizationLevel: 3, pngquant:{quality: "65-80", speed: 4}}',
+                    // url-loader更好用，小于10KB的图片会自动转成dataUrl，
+                    // 否则则调用file-loader，参数直接传入
+                    'url-loader?limit=20000&name=images/[hash:8].[name].[ext]',
+                ]
+            },
         ]
     },
 
@@ -103,7 +112,7 @@ function makeConfig(options){
 
     pages.forEach(function(filename) {
         var m = filename.match(/(.+)\.html$/);
-        console.log(m);
+        // console.log(m);
         if(m) {
             // @see https://github.com/kangax/html-minifier
             var conf = {

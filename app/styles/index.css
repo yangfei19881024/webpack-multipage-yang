@@ -1,6 +1,7 @@
 .indexpage{
 	color:red;
 	background: blue;
+	font-size: 25px;
 }
 .list li{
 	padding:10px;
@@ -38,4 +39,11 @@ img{
   float:left;
   width:100%;
   position: relative;
+}
+
+.bgImg{
+	width:100px;
+	height: 100px;
+	background-image: url(../images/share.png);
+	background-size: cover;
 }
