@@ -51,7 +51,8 @@ function makeConfig(options){
 
     resolve:{
       alias:{ //路径需要用 path.resolve 处理下
-          "Swipe":path.resolve(__dirname,"bower_components/Swipe/swipe.js")
+          "Swipe":path.resolve(__dirname,"bower_components/Swipe/swipe.js"),
+          "zepto":path.resolve(__dirname,"bower_components/zepto/zepto.js")
       }
     },
 

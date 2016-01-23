@@ -1,41 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>首页-demo</title>
-</head>
-<body>
-	<div class="bgImg"></div>
-	<div id='slider' class='swipe'>
-	  <div class='swipe-wrap'>
-	    <div>
-	    	<a href="">
-	    		<img src="../images/01.jpg" alt="">
-	    	</a>
-	    </div>
-	    <div>
-	    	<a href="">
-	    		<img src="../images/02.jpg" alt="">
-	    	</a>
-	    </div>
-	    <div>
-	    	<a href="">
-	    		<img src="../images/03.jpg" alt="">
-	    	</a>
-	    </div>
-	  </div>
-	</div>
-	<h1 class="indexpage">这是首页!!!--age!!!</h1>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>我的生活</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
-	<div id="userlist"></div>
+    <link rel="stylesheet" href="//g.alicdn.com/msui/sm/0.6.1/css/sm.min.css">
 
-	<div id="linklists">
+  </head>
+  <body>
+    <div class="page-group">
+        <div class="page page-current">
+					<div class="content">
+						<!--弹框-->
+						<div class="content-block">
+							<p><a href="#" class="alert-text">Alert With Text</a></p>
+							<p><a href="#" class="alert-text-title">Alert With Text and Title</a></p>
+							<p><a href="#" class="alert-text-title-callback">Alert With Text and Title and Callback</a></p>
+							<p><a href="#" class="alert-text-callback">Alert With Text and Callback</a></p>
+						</div>
+						<!--日历-->
+						<input type="text" data-toggle='date'/>
 
-	</div>
+						<input type="text" id='datetime-picker'/>
 
-	<!--开发环境script文件一定要提前写好, 生产环境则 自动注入处理的script-->
-	<script data-debug src="/__build/vendors.bundle.js"></script>
-	<script data-debug src="/__build/index.bundle.js"></script>
-</body>
+						<div data-toggle='date' />
+
+						<p><a href="#" class="create-actions">选择操作</a></p>
+
+					</div>
+        </div>
+    </div>
+
+		<!--开发环境script文件一定要提前写好, 生产环境则 自动注入处理的script-->
+		<script data-debug src="/__build/vendors.bundle.js"></script>
+		<script data-debug src="/__build/index.bundle.js"></script>
+
+  </body>
 </html>
