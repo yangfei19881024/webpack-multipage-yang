@@ -28,7 +28,7 @@ function makeConfig(options){
         path: path.resolve(DEBUG ? '__build' : assets),
         filename: DEBUG ? '[name].bundle.js' : 'js/[chunkhash:8].[name].min.js',
         chunkFilename: DEBUG ? '[chunkhash:8].chunk.js' : 'js/[chunkhash:8].chunk.min.js',
-        publicPath: DEBUG ? '/__build/' : ''
+        publicPath: DEBUG ? '/__build/' : 'http://mycdn.com/'
     },
     module: {
         //加载器配置
@@ -51,7 +51,8 @@ function makeConfig(options){
 
     resolve:{
       alias:{ //路径需要用 path.resolve 处理下
-          "Swipe":path.resolve(__dirname,"bower_components/Swipe/swipe.js")
+          "Swipe" :path.resolve(__dirname,"bower_components/Swipe/swipe.js"),
+          "lodash": path.resolve(__dirname,"bower_components/lodash/dist/lodash.js")
       }
     },
 
@@ -61,7 +62,12 @@ function makeConfig(options){
           chunks: chunks,
           // Modules must be shared between all entries
           minChunks: chunks.length // 提取所有chunks共同依赖的模块
+      }),
+      new webpack.ProvidePlugin({
+        "$": "jquery",
+        "_":"lodash"
       })
+
     ],
 
     postcss: function () {

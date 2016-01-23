@@ -47,3 +47,10 @@ img{
 	background-image: url(../images/share.png);
 	background-size: cover;
 }
+
+.bg_box{
+	width: 100px;
+	height: 100px;
+	background: url(../images/01.jpg) no-repeat;
+	background-size: cover;
+}
