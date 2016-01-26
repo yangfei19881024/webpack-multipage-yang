@@ -81,10 +81,11 @@ function makeConfig(options){
         test:   /\.css$/,
         loader: "style-loader!css-loader!postcss-loader"
     };
-    // var sassLoader = {
-    //     test: /\.scss$/,
-    //     loader: 'style!css!sass'
-    // };
+    /**
+    *===css module 和postcss 结合起来使用(一般用在react里面)
+    *==={ test: /\.css$/, loader: 'style-loader!css-loader?modules&localIdentName=[name]__[local]-[hash:base64:5]!postcss-loader' },
+    *===参考http://www.tuicool.com/articles/nYjyEzZ
+    */
 
     config.module.loaders.push(cssLoader);
     //config.module.loaders.push(sassLoader);
