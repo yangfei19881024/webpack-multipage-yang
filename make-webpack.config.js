@@ -48,7 +48,7 @@ function makeConfig(options){
             },
         ]
     },
-
+    devtool:'source-map', //方便代码调试
     resolve:{
       alias:{ //路径需要用 path.resolve 处理下
           "Swipe" :path.resolve(__dirname,"bower_components/Swipe/swipe.js"),
