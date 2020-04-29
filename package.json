@@ -24,7 +24,7 @@
     "html-webpack-plugin": "^1.7.0",
     "image-webpack-loader": "^1.6.1",
     "imagemin": "^3.2.0",
-    "jquery": "^2.1.4",
+    "jquery": "^3.5.0",
     "jshint-stylish": "^2.0.1",
     "jsx-loader": "~0.13.2",
     "lodash": "^3.10.0",
